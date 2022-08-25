@@ -1,3 +1,7 @@
+#include <xc.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #ifndef __UART_H
 #define __UART_H
 

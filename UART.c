@@ -1,16 +1,13 @@
-#include <xc.h>
 #include "UART.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 #ifndef SYS_FREQ
-#define SYS_FREQ 120000000
+#define SYS_FREQ 120000000  // 120 MHz
 #endif
 
 void UART_Init(){
     int pbClk;
     
-    pbClk = SYS_FREQ / 1; // Our PBCLK2 divider was set to 1, so PBCLK2 is exactly half the speed of the system clock, or 100Mhz
+    pbClk = SYS_FREQ / 1;
 
     U5MODE = 0;                         // Set UART 5 off prior to setting it up
     U5MODEbits.BRGH = 0;                // High Baud Rate Enable bit. 0 = Standard Speed Mode - 16x baud clock enables
